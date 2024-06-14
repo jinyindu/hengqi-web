@@ -7,8 +7,7 @@ import BannerMobile from "../BannerMobile";
 export default function IndexSearch() {
   return (
     <>
-      <div className="sm:hidden"> <Banner /></div>
-      <div className="sm:block hidden"><BannerMobile /></div>
+      <div> <Banner /></div>
     </>
   );
 }

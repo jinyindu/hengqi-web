@@ -520,11 +520,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 9711:
+/***/ 4853:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 612, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 147, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 612, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 4002, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 493, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 9900, 23))
@@ -534,7 +534,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 /***/ 7976:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7511))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9153))
 
 /***/ }),
 
@@ -545,7 +545,7 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 
 /***/ }),
 
-/***/ 7511:
+/***/ 9153:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -687,11 +687,16 @@ function Footer(props) {
             className: "mx-auto mt-0 w-full max-w-container px-4 sm:px-6 lg:px-8",
             children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "border-t border-slate-900/5 py-10",
-                children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                    className: "text-center text-sm leading-6 text-slate-500",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                        children: "南京希诺恒企教育咨询服务有限公司\xa9版权所有"
-                    })
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                    className: "text-center text-sm leading-6 text-slate-500 flex flex-col",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                            children: "地址：南京市江北新区大桥北路48号弘阳A2区四层4050-4053 4068-4069室"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                            children: "南京希诺恒企教育咨询服务有限公司\xa9版权所有"
+                        })
+                    ]
                 })
             })
         })
@@ -905,130 +910,18 @@ const Banner = ()=>{
 };
 /* harmony default export */ const components_Banner = (Banner);
 
-;// CONCATENATED MODULE: ./src/components/BannerMobile.tsx
-
-
-
-
-
-
-
-
-const BannerMobile_Slide = /*#__PURE__*/ (0,react_.memo)((props)=>{
-    const { data: { bgImg , render  } , index  } = props;
-    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
-        children: bgImg ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-            className: "relative h-[23.1026rem] w-full pt-[25px]",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx(components_Background, {
-                    src: bgImg,
-                    priority: true,
-                    alt: ""
-                }),
-                render()
-            ]
-        }, index) : /*#__PURE__*/ jsx_runtime_.jsx("div", {
-            children: render()
-        })
-    });
-});
-BannerMobile_Slide.displayName = "Slide";
-const bannerData = [
-    {
-        bgImg: "https://cdn2.weimob.com/saas/@assets/saas-fe-website-h5-stc/_next/static/media/L101.ea36f933.jpg",
-        render: ()=>/*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "relative text-center"
-            })
-    },
-    {
-        bgImg: "https://cdn2.weimob.com/saas/@assets/saas-fe-website-h5-stc/_next/static/media/L101.ea36f933.jpg",
-        render: ()=>/*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "relative text-center"
-            })
-    },
-    {
-        bgImg: "https://cdn2.weimob.com/saas/@assets/saas-fe-website-h5-stc/_next/static/media/L101.ea36f933.jpg",
-        render: ()=>/*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "relative text-center"
-            })
-    }
-];
-const BannerMobile_CustomPagination = /*#__PURE__*/ (0,react_.memo)((props)=>{
-    const { changeSlide , activeIndex  } = props;
-    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
-        className: "relative mx-auto w-full",
-        children: /*#__PURE__*/ jsx_runtime_.jsx("ul", {
-            className: "absolute bottom-[24px] left-1/2 z-10 flex -translate-x-1/2 justify-between rounded-[14px] bg-[#000B17]/10 px-[24px] py-[12px]",
-            children: bannerData.map((slide, index)=>{
-                return /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    onClick: changeSlide(index),
-                    className: classnames_default()("z-20 mr-[12px] h-[4px] w-[28px] last:mr-[0px]", activeIndex === index ? "bg-[#0071EF] opacity-100" : "bg-[#17181B] opacity-10")
-                }, index);
-            })
-        })
-    });
-});
-BannerMobile_CustomPagination.displayName = "CustomPagination";
-const BannerMobile_Banner = (props)=>{
-    const [activeIndex, setActiveIndex] = (0,react_.useState)(0);
-    const [mainSwiper, setMainSwiper] = (0,react_.useState)();
-    const changeSlide = (0,react_.useCallback)((index)=>()=>{
-            setActiveIndex(index);
-            mainSwiper.slideTo(index);
-        }, [
-        mainSwiper
-    ]);
-    (0,react_.useEffect)(()=>{
-        const dom = document.getElementById("videoId");
-        if (dom) dom.play();
-    });
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: "relative h-[23.1026rem] w-full",
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(swiper_react/* Swiper */.tq, {
-                onSwiper: setMainSwiper,
-                onSlideChange: (e)=>{
-                    setActiveIndex(e.activeIndex);
-                },
-                className: "w-full",
-                children: bannerData.map((item, index)=>/*#__PURE__*/ jsx_runtime_.jsx(swiper_react/* SwiperSlide */.o5, {
-                        className: "w-full",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx(BannerMobile_Slide, {
-                            data: item,
-                            index: index
-                        })
-                    }, index))
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(BannerMobile_CustomPagination, {
-                changeSlide: changeSlide,
-                activeIndex: activeIndex,
-                bannerData: bannerData
-            })
-        ]
-    });
-};
-/* harmony default export */ const BannerMobile = (BannerMobile_Banner);
-
 ;// CONCATENATED MODULE: ./src/components/IndexSearch/index.tsx
 /* __next_internal_client_entry_do_not_use__ default auto */ 
 
 
-
 function IndexSearch() {
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: "sm:hidden",
-                children: [
-                    " ",
-                    /*#__PURE__*/ jsx_runtime_.jsx(components_Banner, {})
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "sm:block hidden",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(BannerMobile, {})
-            })
-        ]
+    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            children: [
+                " ",
+                /*#__PURE__*/ jsx_runtime_.jsx(components_Banner, {})
+            ]
+        })
     });
 }
 

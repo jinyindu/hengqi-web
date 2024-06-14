@@ -13,11 +13,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <link
-          rel="shortcut icon"
-          href={`//cdn2.weimob.com/saas/@assets/saas-fe-website-web-stc/images/favicon.ico`}
-          type="image/x-icon"
-        /> */}
       <body>{children}</body>
     </html>
   )
